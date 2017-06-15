@@ -134,9 +134,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 h1 {
   font-size: 40px;
-  padding: 20px;
+  padding: 5px 20px;
   letter-spacing: 8px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center; }
 
 body {
   position: relative; }
@@ -178,6 +180,7 @@ body {
       align-items: center; }
       .content-container aside div.asideBottom .play-btn {
         display: inline-block;
+        margin-top: 20px;
         width: 150px;
         padding: 10px 20px;
         border: 3px solid #3F4351;
@@ -188,14 +191,17 @@ body {
         transform: translate(5px -4px);
         transition: all 0.3s ease;
         font-size: 26px; }
-        .content-container aside div.asideBottom .play-btn a {
-          color: #052131;
-          text-decoration: none; }
+        .content-container aside div.asideBottom .play-btn .playText {
+          font-size: 30px; }
         .content-container aside div.asideBottom .play-btn:hover {
           -webkit-transform: translate(-4px, 4px);
           -ms-transform: translate(-4px, 4px);
           transform: translate(-4px, 4px);
           cursor: pointer; }
+        .content-container aside div.asideBottom .play-btn:hover .content-container aside div.asideBottom .play-btn:before {
+          -webkit-transform: translate(4px, -4px);
+          -ms-transform: translate(4px, -4px);
+          transform: translate(4px, -4px); }
         .content-container aside div.asideBottom .play-btn:before {
           content: '';
           display: block;
@@ -277,7 +283,7 @@ div.back {
 
 div.front {
   z-index: -2;
-  border: 1px solid #052131;
+  border: 2px solid #3F4351;
   background-image: url(../assets/whirlpool.png); }
 
 li img {
@@ -302,7 +308,7 @@ li .caption {
   transform: rotateY(180deg); }
 
 .timer {
-  border: 2px solid #3F4351;
+  border: 3px solid #3F4351;
   width: 150px;
   text-align: center;
   display: -webkit-flex;
@@ -349,15 +355,16 @@ footer {
       transform: scale(1.1); }
   footer p {
     margin: 0; }
-  footer span {
-    padding: 0 10px;
-    cursor: pointer;
-    font-size: 22px; }
+    footer p .fa {
+      padding: 0 10px;
+      cursor: pointer;
+      font-size: 22px; }
+    footer p .iconTransform {
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
   footer .credit {
     position: relative; }
-    footer .credit .iconTransform {
-      -webkit-transform: rotateY(90deg);
-      transform: rotateY(90deg); }
     footer .credit .artists {
       display: none;
       padding: 10px; }
@@ -375,58 +382,55 @@ footer {
 
 .raccoon-container {
   width: 80%;
-  margin: 0 auto 20px auto; }
+  margin: 0 auto 10px auto; }
 
 .trash-panda {
-  width: 225px;
-  height: 165px;
+  width: 190px;
+  height: 135px;
   position: relative;
-  margin: 0;
+  text-align: center;
+  margin: 0 auto;
   background-color: #bcbdc1;
   border-top-left-radius: 105px;
   border-top-right-radius: 105px;
   border-bottom-left-radius: 100px 60px;
   border-bottom-right-radius: 100px 60px;
-  background-image: radial-gradient(ellipse at 50% 68%, #251f23 10px, transparent 11px), radial-gradient(ellipse at 211px 104px, #e6e9ef 100px, transparent 26px), radial-gradient(ellipse at 15px 104px, #e6e9ef 100px, transparent 100px);
+  background-image: radial-gradient(ellipse at 50% 68%, #251f23 10px, transparent 11px), radial-gradient(ellipse at 177px 96px, #e6e9ef 90px, transparent 90px), radial-gradient(ellipse at 17px 95px, #e6e9ef 90px, transparent 90px);
   background-repeat: no-repeat; }
 
 .trash-panda:before {
   content: "";
   display: block;
-  width: 50px;
-  height: 60px;
+  width: 40px;
+  height: 50px;
   position: absolute;
-  left: 35px;
-  top: 70px;
+  left: 33px;
+  top: 63px;
   background: #818286;
   border-radius: 50% 50% 42% 75%;
   -webkit-transform: rotate(35deg);
   -ms-transform: rotate(35deg);
   transform: rotate(35deg);
-  background-image: radial-gradient(circle at 32px 20px, #251f23 8px, transparent 8px);
-  box-shadow: 75px -145px 0 -16px #e6e9ef, 75px -145px 0 -2px #818286; }
+  background-image: radial-gradient(circle at 26px 20px, #251f23 8px, transparent 8px);
+  box-shadow: 56px -128px 0 -15px #e6e9ef, 56px -128px 0 -2px #818286; }
 
 .trash-panda:after {
   content: "";
   display: block;
-  width: 50px;
-  height: 60px;
+  width: 40px;
+  height: 50px;
   position: absolute;
-  right: 35px;
-  top: 70px;
+  right: 33px;
+  top: 63px;
   background: #818286;
   border-radius: 50% 50% 75% 45%;
   -webkit-transform: rotate(-35deg);
   -ms-transform: rotate(-35deg);
   transform: rotate(-35deg);
-  background-image: radial-gradient(circle at 20px 20px, #251f23 8px, transparent 8px);
-  box-shadow: -75px -145px 0 -16px #e6e9ef, -75px -145px 0 -2px #818286; }
+  background-image: radial-gradient(circle at 15px 20px, #251f23 8px, transparent 8px);
+  box-shadow: -56px -128px 0 -15px #e6e9ef, -56px -128px 0 -2px #818286; }
 
-@media (max-width: 1140px) {
-  .raccoon-container {
-    display: none; } }
-
-@media (max-width: 1040px) {
+@media (max-width: 1000px) {
   h1 {
     font-size: 28px; }
   .caption {
@@ -440,7 +444,76 @@ footer {
 
 @media (max-width: 845px) {
   .content-container {
-    min-height: auto; } }
+    display: block;
+    min-height: auto;
+    margin: 2%; }
+    .content-container aside {
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      border: 5px solid #052131;
+      border-right: none; }
+      .content-container aside div.asideBottom, .content-container aside div.asideTop {
+        width: 50%; }
+      .content-container aside div.asideBottom {
+        border-top: 5px solid #052131;
+        border-top: none;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        height: 100%; }
+        .content-container aside div.asideBottom .play-btn {
+          display: inline-block;
+          margin-top: 20px;
+          width: 150px;
+          padding: 10px 20px;
+          border: 3px solid #3F4351;
+          background: transparent;
+          position: relative;
+          -webkit-transform: translate(5px -4px);
+          -ms-transform: translate(5px -4px);
+          transform: translate(5px -4px);
+          transition: all 0.3s ease;
+          font-size: 26px; }
+          .content-container aside div.asideBottom .play-btn .playText {
+            font-size: 30px; }
+          .content-container aside div.asideBottom .play-btn:hover {
+            -webkit-transform: translate(-4px, 4px);
+            -ms-transform: translate(-4px, 4px);
+            transform: translate(-4px, 4px);
+            cursor: pointer; }
+          .content-container aside div.asideBottom .play-btn:hover .content-container aside div.asideBottom .play-btn:before {
+            -webkit-transform: translate(4px, -4px);
+            -ms-transform: translate(4px, -4px);
+            transform: translate(4px, -4px); }
+          .content-container aside div.asideBottom .play-btn:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-color: rgba(77, 63, 81, 0.4);
+            transition: all 0.3s ease;
+            -webkit-transform: translate(6px, -6px);
+            -ms-transform: translate(6px, -6px);
+            transform: translate(6px, -6px); }
+          .content-container aside div.asideBottom .play-btn .minutes, .content-container aside div.asideBottom .play-btn .seconds {
+            width: 250px;
+            height: 200px; }
+    .content-container main {
+      width: 100%;
+      border: 5px solid #052131;
+      border-top: none; } }
 
 @media (max-width: 480px) {
   footer {

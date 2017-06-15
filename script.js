@@ -210,6 +210,7 @@ $ (function(){
 
 	// add click to image credits
 	$('.fa-hand-o-up').on('click', function() {
+		$(this).toggleClass('iconTransform');
 		$('.artists').toggleClass('artistsDisplay');
 	})
 
