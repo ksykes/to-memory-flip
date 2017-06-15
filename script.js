@@ -6,12 +6,10 @@ var intervalCleared = false;
 $ (function(){
 	// this sets up the time function
 	function timeSetup(cb) {
-		console.log(intervalCleared);
 		var seconds = Math.floor(time % 60);
 		seconds = ("0" + seconds).slice(-2);
 		var minutes = Math.floor(time / 60) % 60;
 		minutes = ("0" + minutes).slice(-2);
-		console.log(seconds)
 		$('.seconds .digit').html(seconds);
 		$('.minutes .digit').html(minutes);
 		if( cb !== undefined) {
@@ -130,7 +128,6 @@ $ (function(){
 	var shuffledArray = _.shuffle(cardArray);
 	// forEach over the array of shuffled cards
 	shuffledArray.forEach(function (arrayItem){
-		console.log(arrayItem);
 		// using jquery dynamically generate the whole li 
 		$("ul").append(`<li class="card" data-cardnum="${arrayItem.dataAttribute}"><div class="flip-container"><div class="flip back"><img src="${arrayItem.img}"><p class="caption tk-museo-sa">${arrayItem.caption}</p></div><div class="flip front"></div></div></li>`);
 	});
@@ -150,11 +147,8 @@ $ (function(){
 			$flipContainer.addClass("flipped");
 			if (counter === 2){
 				if (cardPair[0] === cardPair[1]){
-					console.log('match');
 					// If they match, increase numOfPairs by 1
 					numOfPairs = numOfPairs + 1;
-					console.log(numOfPairs);
-					console.log(cardNumber);
 					$(`li[data-cardnum=${cardNumber}]`).addClass("matched");
 					cardPair = [];
 					counter = 0;
@@ -200,7 +194,6 @@ $ (function(){
 						swal("Way to go!")
 					},0);
 					numOfPairs = 0;
-					console.log(countdown);
 					// if time = 0 and pairs do not = 10, you lose alert
 				}
 			});

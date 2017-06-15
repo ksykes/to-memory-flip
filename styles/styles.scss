@@ -296,55 +296,14 @@ footer {
 		width: 100%;
 		display: flex;
 		border: 5px solid #052131;
-		border-right: none;
 		div.asideBottom, div.asideTop {
 			width: 50%;
 		}
 		div.asideBottom {
-			border-top: 5px solid #052131;
 			border-top: none;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
 			height: 100%;
 			.play-btn {
-				display: inline-block;
-				margin-top: 20px;
-				width: 150px;
-				padding: 10px 20px;
-				border: 3px solid #3F4351;
-				background: transparent;
-				position: relative;
-				transform: translate(5px -4px);
-				transition: all 0.3s ease;
-				font-size: 26px;
-				.playText {
-					font-size: 30px;
-				}
-				&:hover {
-					transform: translate(-4px, 4px);
-					cursor: pointer;
-				}
-				&:hover &:before{
-					transform: translate(4px, -4px);
-				}
-				&:before {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					z-index: -1;
-					background-color: rgba(77, 63, 81, 0.4);
-					transition: all 0.3s ease;
-					transform: translate(6px, -6px);
-				}
-				.minutes, .seconds {
-					width: 250px;
-					height: 200px;
-				}
+				margin-bottom: 40px;
 			}
 			}
 		}
@@ -353,13 +312,14 @@ footer {
 			border: 5px solid #052131;
 			border-top: none;
 		}
-
-}
-
+	.timer {
+		margin-bottom: 0;
+	}
+	}
 }
 
 @media (max-width: 480px) {
 	footer {
-		font-size: 26px;
+		font-size: 22px;
 	}
 }
