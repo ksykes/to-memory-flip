@@ -135,18 +135,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 h1 {
   font-size: 40px;
-  font-family: "acier-bat-outline", "Bungee Outline", sans-serif;
+  font-family: "Fugaz One", sans-serif;
   padding: 5px 20px;
   letter-spacing: 8px;
   margin-bottom: 0;
   margin-top: 10px;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
 
 .playText {
-  font-family: "acier-bat-outline", sans-serif; }
+  font-family: "Fugaz One", sans-serif; }
 
 .timer {
-  font-family: "acier-bat-solid", sans-serif; }
+  font-family: "Fugaz One", sans-serif; }
 
 body {
   position: relative; }
