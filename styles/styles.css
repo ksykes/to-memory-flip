@@ -317,6 +317,7 @@ li img {
   max-height: 60%; }
 
 li .caption {
+  font-family: 'Roboto', sans-serif;
   background: #052131;
   color: #fff;
   max-width: 90%;
@@ -354,6 +355,7 @@ li .caption {
   background: rgba(77, 63, 81, 0.4); }
 
 footer {
+  font-family: 'Roboto', sans-serif;
   min-height: 10vh;
   display: -webkit-box;
   display: -webkit-flex;

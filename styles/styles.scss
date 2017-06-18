@@ -1,9 +1,6 @@
 @import "setup";
 
-
-
 h1 {
-	// text-transform: uppercase;
 	font-size: 40px;
 	font-family: "Fugaz One", sans-serif;
 	padding: 5px 20px;
@@ -149,6 +146,7 @@ li img {
 	max-height: 60%;
 }
 li .caption {
+	font-family: 'Roboto', sans-serif;
 	background: #052131;
 	color: #fff;
 	max-width: 90%;
@@ -181,6 +179,7 @@ li .caption {
 	}
 
 footer {
+	font-family: 'Roboto', sans-serif;
 	min-height: 10vh;
 	display: flex;
 	flex-wrap: wrap;
@@ -231,6 +230,7 @@ footer {
 }
 
 // RACCOON
+
 .raccoon-container {
 	width: 80%;
 	margin: 0 auto 10px auto;
@@ -281,6 +281,7 @@ footer {
 	box-shadow: -56px -128px 0 -15px #e6e9ef, -56px -128px 0 -2px #818286;
 }
 
+// MEDIA QUERIES
 
 @media (max-width: 1000px) {
 	h1 {
@@ -300,33 +301,33 @@ footer {
 }
 
 @media (max-width: 845px) {
-.content-container {
-	display: block;
-	min-height: auto;
-	margin: 2%;
-	aside {
-		width: 100%;
-		display: flex;
-		border: 5px solid #052131;
-		div.asideBottom, div.asideTop {
-			width: 50%;
-		}
-		div.asideBottom {
-			border-top: none;
-			height: 100%;
-			.play-btn {
-				margin-bottom: 40px;
+	.content-container {
+		display: block;
+		min-height: auto;
+		margin: 2%;
+		aside {
+			width: 100%;
+			display: flex;
+			border: 5px solid #052131;
+			div.asideBottom, div.asideTop {
+				width: 50%;
 			}
-			}
+			div.asideBottom {
+				border-top: none;
+				height: 100%;
+				.play-btn {
+					margin-bottom: 40px;
+				}
+				}
 		}
 		main {
 			width: 100%;
 			border: 5px solid #052131;
 			border-top: none;
 		}
-	.timer {
-		margin-bottom: 0;
-	}
+		.timer {
+			margin-bottom: 0;
+		}
 	}
 }
 
