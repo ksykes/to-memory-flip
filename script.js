@@ -167,7 +167,7 @@ $ (function(){
 
 	// upon clicking the play button, timer is set to 1:30sec
 	$(".play-btn").on("click", function() {
-		time=10;
+		time=90;
 		numOfPairs = 0;
 
 		$("li").removeClass("matched");
