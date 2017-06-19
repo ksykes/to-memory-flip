@@ -349,15 +349,85 @@ footer {
 		justify-content: center;
 		padding: 2%;
 		border: 4px solid #BCBDC1;
+		background-color: white;
+	    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	    width: 478px;
+	    padding: 17px;
+	    border-radius: 5px;
+	    text-align: center;
+	    position: fixed;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -256px;
+	    margin-top: -200px;
+	    overflow: hidden;
+	    z-index: 99999;
+		@media all and (max-width: 540px) {
+	      .mobileAlert {
+	        width: auto;
+	        margin-left: 0;
+	        margin-right: 0;
+	        left: 15px;
+	        right: 15px; } }
 		h2 {
 			font-size: 60px;
 			line-height: 50px;
+			color: #575757;
+		    font-size: 30px;
+		    text-align: center;
+		    font-weight: 600;
+		    text-transform: none;
+		    position: relative;
+		    margin: 25px 0;
+		    padding: 0;
+		    line-height: 40px;
+		    display: block;
 		}
 		button {
 			width: 30%;
 			margin: 5% auto 0 auto;
 			font-size: 50px;
+			background-color: #8CD4F5;
+		    color: white;
+		    border: none;
+		    box-shadow: none;
+		    font-size: 17px;
+		    font-weight: 500;
+		    -webkit-border-radius: 4px;
+		    border-radius: 5px;
+		    padding: 10px 32px;
+		    margin: 26px 5px 0 5px;
+		    cursor: pointer;
 		}
+
+		@-webkit-keyframes showSweetAlert {
+		  0% {
+		    transform: scale(0.7);
+		    -webkit-transform: scale(0.7); }
+		  45% {
+		    transform: scale(1.05);
+		    -webkit-transform: scale(1.05); }
+		  80% {
+		    transform: scale(0.95);
+		    -webkit-transform: scale(0.95); }
+		  100% {
+		    transform: scale(1);
+		    -webkit-transform: scale(1); } }
+
+		@keyframes showSweetAlert {
+		  0% {
+		    transform: scale(0.7);
+		    -webkit-transform: scale(0.7); }
+		  45% {
+		    transform: scale(1.05);
+		    -webkit-transform: scale(1.05); }
+		  80% {
+		    transform: scale(0.95);
+		    -webkit-transform: scale(0.95); }
+		  100% {
+		    transform: scale(1);
+		    -webkit-transform: scale(1); } }
+
 	}
 	.content-container aside div.asideBottom .play-btn {
 		margin-bottom: 40px;

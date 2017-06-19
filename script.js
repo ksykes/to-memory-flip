@@ -128,12 +128,12 @@ $ (function(){
 	var shuffledArray = _.shuffle(cardArray);
 	// forEach over the array of shuffled cards
 	shuffledArray.forEach(function (arrayItem){
-		// using jquery dynamically generate the whole li 
+		// using jquery dynamically generate the whole li
 		$("ul").append(`<li class="card" data-cardnum="${arrayItem.dataAttribute}"><div class="flip-container"><div class="flip back"><img src="${arrayItem.img}"><p class="caption tk-museo-sa">${arrayItem.caption}</p></div><div class="flip front"></div></div></li>`);
 	});
 	// because you've just created the li's, use event delegation in your click listener below to listen for the eventual list
 
-// User selects a card - that card flips over. User selects a second card - that card flips over. 
+// User selects a card - that card flips over. User selects a second card - that card flips over.
 	$("ul").on("click", "li", function(){
 
 		var $flipContainer = $(this).children('.flip-container');
@@ -142,7 +142,7 @@ $ (function(){
 		if ($flipContainer.hasClass('flipped') === false) {
 			counter = counter + 1;
 			var cardNumber = $(this).data('cardnum');
-			cardPair.push(cardNumber);	
+			cardPair.push(cardNumber);
 
 			$flipContainer.addClass("flipped");
 			if (counter === 2){
@@ -161,13 +161,13 @@ $ (function(){
 					counter = 0;
 				}
 			}
-		} 
+		}
 	});
 
 
-	// upon clicking the play button, timer is set to 1:30sec 
+	// upon clicking the play button, timer is set to 1:30sec
 	$(".play-btn").on("click", function() {
-		time=90;
+		time=10;
 		numOfPairs = 0;
 
 		$("li").removeClass("matched");
@@ -197,7 +197,7 @@ $ (function(){
 					// if time = 0 and pairs do not = 10, you lose alert
 				}
 			});
-			
+
 		},1000);
 	})
 
@@ -207,7 +207,4 @@ $ (function(){
 		$('.artists').toggleClass('artistsDisplay');
 	})
 
-}); // end of doc ready 
-
-
-
+}); // end of doc ready
