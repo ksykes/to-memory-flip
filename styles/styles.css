@@ -413,6 +413,9 @@ footer {
       right: 0;
       bottom: 100%; }
 
+.mobileAlert {
+  display: none; }
+
 .raccoon-container {
   max-width: 80%;
   margin: 0 auto 10px auto; }
@@ -516,10 +519,7 @@ footer {
     font-size: 22px; }
   .mobileAlert {
     width: 80%;
-    height: 60%;
-    position: absolute;
-    top: 20%;
-    left: 35%;
+    height: 50%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -542,10 +542,10 @@ footer {
     border-radius: 5px;
     text-align: center;
     position: fixed;
-    left: 50%;
+    left: 55%;
     top: 50%;
     margin-left: -256px;
-    margin-top: -200px;
+    margin-top: -500px;
     overflow: hidden;
     z-index: 99999; } }
   @media all and (max-width: 480px) and (max-width: 540px), all and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) and (max-width: 540px) {
@@ -585,7 +585,8 @@ footer {
       border-radius: 5px;
       padding: 10px 32px;
       margin: 26px 5px 0 5px;
-      cursor: pointer; }
+      cursor: pointer;
+      border: 3px solid #8CD4F5; }
   @-webkit-keyframes showSweetAlert {
     0% {
       transform: scale(0.7);
